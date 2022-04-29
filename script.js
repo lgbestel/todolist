@@ -56,26 +56,15 @@ function clearAll () {
 
 function removerFinalizados () {
 
-    let finalizados = document.getElementsByClassName('completed');
-    
     let btnRemover = document.querySelector('#remover-finalizados');
 
     btnRemover.addEventListener('click', function(){ 
+        let finalizados = document.querySelectorAll('.completed');
+        console.log(finalizados);
         for (let i = 0; i < finalizados.length; i += 1) {
+            // console.log(finalizados[i]);
             finalizados[i].remove();    
         }
    })
 
 } removerFinalizados ()
-
-// function selectColor () {
-
-//     let colorPalette = document.querySelector('#color-palette');
-
-//     colorPalette.addEventListener('click', function(event){
-//     let selectedColor = document.querySelector('.selected');
-//     selectedColor.classList.remove('selected');
-//     event.target.classList.add('selected');
-//     })
-
-// } selectColor ();
