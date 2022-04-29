@@ -21,7 +21,61 @@ function selecionarTarefa () {
     
     olTarefas.addEventListener('click', function (event) {
         let selectedTask = document.querySelector('#selected');
-        event.target.id = 'selected';
-        selectedTask.id = '';
+        if (selectedTask == null) {
+        event.target.id = 'selected'; 
+        } else {
+        selectedTask.removeAttribute('id');
+        event.target.id = 'selected';   
+        }
     })
 } selecionarTarefa ();
+
+function finalizarTarefa () {
+
+    let olTarefas = document.querySelector('#lista-tarefas');
+    
+    olTarefas.addEventListener('dblclick', function (event) {
+        if (event.target.classList.contains('completed')) {
+            event.target.classList.remove('completed');
+        } else {
+            event.target.classList.add('completed');
+        }
+    })
+} finalizarTarefa ();
+
+function clearAll () {
+
+    let btnApaga = document.querySelector('#apaga-tudo');
+    let olTarefas = document.querySelector('#lista-tarefas');
+
+    btnApaga.addEventListener('click', function(){
+        olTarefas.innerHTML = '';
+    })
+
+} clearAll ();
+
+function removerFinalizados () {
+
+    let finalizados = document.getElementsByClassName('completed');
+    
+    let btnRemover = document.querySelector('#remover-finalizados');
+
+    btnRemover.addEventListener('click', function(){ 
+        for (let i = 0; i < finalizados.length; i += 1) {
+            finalizados[i].remove();    
+        }
+   })
+
+} removerFinalizados ()
+
+// function selectColor () {
+
+//     let colorPalette = document.querySelector('#color-palette');
+
+//     colorPalette.addEventListener('click', function(event){
+//     let selectedColor = document.querySelector('.selected');
+//     selectedColor.classList.remove('selected');
+//     event.target.classList.add('selected');
+//     })
+
+// } selectColor ();
