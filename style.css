@@ -1,7 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 1em;
+  font-family: Courier, monospace, sans-serif;
+}
+
+header p {
+  color: grey;
+  font-size: 10px;
+}
+
+main {
+  align-items: flex-start;
+  background-color: rgba(255 , 228 , 196 , 0.493);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 400px;
+  min-height: 400px;
+  padding: 1em;
+}
+
+input {
+  padding: 4px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.buttons-container {
+  display: flex;
+}
+
+button {
+  padding: 4px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  margin: 2px;
+}
+
+button:nth-of-type( 1 ) {
+  background-color: rgb(0 , 225 , 255);
+}
+
+button:nth-of-type( 2 ) {
+  background-color: rgb(224 , 79 , 79);
+}
+
+button:nth-of-type( 3 ) {
+  background-color: rgb(235 , 171 , 98);
+}
+
+button:nth-of-type( 4 ) {
+  background-color: rgb(129 , 212 , 136);
+}
+
+button:nth-of-type( 5 ) {
+  background-color: rgb(166 , 121 , 224);
+}
+
+li {
+  font-family: Courier, monospace, sans-serif;
+}
+
 #selected {
-    background-color: grey;
+  background-color: grey;
 }
 
 .completed {
-    text-decoration: line-through solid black;
+  text-decoration: line-through solid black;
 }
